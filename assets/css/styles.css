@@ -1,12 +1,54 @@
 body
 {
-    background-color: #000;
     margin:0 auto;
-    display: block;
-    position: relative;
     width:100%;
     color:#fff;
     font-family:arial, sans-serif;
     font-size: 12pt;
     text-align: center;
+    background-color: #001B3A;
+}
+
+/* NAV */
+.navbar-brand {
+    max-width:1280px;
+}
+
+.sw-logo {
+    width:100px;
+    height:auto;
+    display: block;
+}
+
+.box-holder {
+    max-width:1280px;
+    margin:0 auto;
+}
+
+.bg-blue {
+    background-color: #00224B;
+}
+
+/* HERO */
+.img-hero {
+    /* background: #ffffff url("../images/hero5.jpg") no-repeat center top; */
+    /* background-size:cover; */
+    /* width:600px; */
+    min-height:600px;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    margin:20px auto 0;
+    padding:10px;
+    background-color: #555;
+}
+
+.footer-icon {
+    margin:0 10px;
+    width:20px;
+    height:20px;
 }
