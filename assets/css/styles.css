@@ -9,6 +9,10 @@ body
     background-color: #001B3A;
 }
 
+p{
+    font-size:12px;
+}
+
 /* NAV */
 .navbar-brand {
     max-width:1280px;
@@ -31,15 +35,25 @@ body
 
 /* HERO */
 .img-hero {
-    /* background: #ffffff url("../images/hero5.jpg") no-repeat center top; */
-    /* background-size:cover; */
+    background: #ffffff url("../images/hero5.jpg") no-repeat center top;
+    background-size:cover;
     /* width:600px; */
     min-height:600px;
+}
+
+.carousel {
+    margin:150px auto;
 }
 
 .d-block {
     padding-bottom:180px;
 }
+
+.card {
+    background-color: #001B3A !important;
+    color:#ffffff;
+}
+
 
 
 
@@ -49,6 +63,20 @@ footer {
     margin:20px auto 0;
     padding:10px;
     background-color: #555;
+}
+
+.box-footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    text-align: center;
+}
+
+.txt-footer {
+    width:250px;
+    color:#666;
+    font-size:10px;
 }
 
 .footer-icon {
