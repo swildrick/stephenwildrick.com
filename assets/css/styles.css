@@ -6,23 +6,44 @@ body
     font-family:arial, sans-serif;
     font-size: 12pt;
     text-align: center;
-    background-color: #001B3A;
+    /* background-color: #001B3A; */
 }
 
-p{
+/* GENERAL */
+p { 
     font-size:12px;
 }
 
-/* NAV */
-.navbar-brand {
-    max-width:1280px;
+.bg-blue {
+    background-color: #00224B;
 }
 
-.sw-logo {
-    width:100px;
-    height:auto;
-    display: block;
+/* NAV */
+nav {
+    max-width:1280px;
+    margin:0 auto;
+    padding:2rem 0 .3rem;
+}
+
+nav .nav-link {
+    color:#212529;
+    padding:0;
     opacity:.5;
+    transition: opacity .7s;
+}
+
+nav .nav-link:hover {
+    opacity:1;
+}
+
+/* HERO */
+.sw-logo {
+    display: block;
+    margin:0 auto;
+    width:200px;
+    height:auto;
+    margin-top:250px;
+
 }
 
 .box-holder {
@@ -30,34 +51,79 @@ p{
     margin:0 auto;
 }
 
-.bg-blue {
-    background-color: #00224B;
-}
-
-/* HERO */
 .img-hero {
-    background: #ffffff url("../images/hero3.jpg") no-repeat center top;
+    background: #ffffff url("../images/hero.jpg") no-repeat center top;
     background-size:cover;
-    /* width:600px; */
     min-height:600px;
 }
 
+/* CAROUSEL */
 .carousel {
-    margin:150px auto;
+    margin:1.5rem auto;
+    background-color: #212529;
+    padding:2rem 1rem;
 }
 
 .d-block {
     padding-bottom:180px;
 }
 
+
+/* CARDS */
 .card {
-    background-color: #001B3A !important;
-    color:#ffffff;
+    color:#555;
+    width:320px;
+    margin:0 auto;
+    border:0;
+}
+.box-circle {
+    width:300px;
+    margin:0 auto;
+    background-color: #fff;
+    padding:38px;
+    position: relative;
 }
 
+.card-img-top {
+    position: relative;
+    z-index: 1;
+}
 
+.circle-anm {
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    z-index: 0;
+    margin:auto;
+    width:240px;
 
+}
 
+.circle-l {
+    animation-name: circle-anm-l;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circle-r {
+    animation-name: circle-anm-r;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circle-anm-l {
+    0%   {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+  }
+
+@keyframes circle-anm-r {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
 
 /* FOOTER */
 footer {
@@ -65,17 +131,8 @@ footer {
     padding:10px;
 }
 
-.box-footer {
-    /* display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    text-align: center; 
-    background-color:#666;*/
-}
-
 .txt-footer {
-    color:#666;
+    color:#fff;
     font-size:10px;
 }
 

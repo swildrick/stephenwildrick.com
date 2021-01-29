@@ -30,19 +30,17 @@
 
 
       <!-- MAIN NAV -->
-      <nav class="navbar navbar-expand-lg navbar-dark py-3">
-        <div class="container">
-          <a class="navbar-brand px-5" href="#">
-            <img src="/assets/images/logo_white.svg" class='sw-logo' />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-
-          </button>
-          <div class="px-5" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="assets/StephenWildrick_resume.pdf" target="_blank">resume</a>
-              <a class="nav-link" href="mailto:swildrick@gmail.com?subject=Hey!!&body=This%20is%20where%20you%20write%20wonderful%20things.%20" target="_blank">contact</a>
+      <nav>
+        <div class="container-fluid mx-auto">
+          <div class="row">
+            <div class="col-0 col-lg-10"></div>
+            <div class="col-6 col-lg-1">
+              <a class="nav-link" href="assets/StephenWildrick_resume.pdf" target="_blank">Resume</a>
             </div>
+            <div class="col-6 col-lg-1">
+              <a class="nav-link" href="mailto:swildrick@gmail.com?subject=Hey!!&body=This%20is%20where%20you%20write%20wonderful%20things.%20" target="_blank">Contact</a>
+            </div>
+            <div class="col-0 col-lg-0"></div>
           </div>
         </div>
       </nav>
@@ -50,13 +48,66 @@
       <div class="box-holder">
 
     <!-- HERO -->
-    <div class="rounded img-hero bg-blue">
-      <p class="lead">Hi, my name is Stephen Wildrick, a Web Developer in Phoenix, Arizona. Over the past 20 years I have been able to work with some of the worlds largest brands, focusing on interactive development and design.
-        A bigger, but please take a look at a few past work samples.</p>
+    <div class="rounded img-hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 mx-auto">
+            <img src="/assets/images/logo_white.svg" class='sw-logo' />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-8 mx-auto my-5">
+            <p class=lead>Hi, my name is Stephen Wildrick, a Web Developer in Phoenix, Arizona. Over the past 20 years I have been able to work with some of the worlds largest brands, focusing on interactive development and design. Please take a look at a few work&nbsp;samples.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- CARDS -->
+    <div class="container-fluid my-2 p-3 box-cards">
+      <div class="container">
+        <div class="row align-items-start justify-content-md-center">
+          <div class="col">
+            <div class="card">
+              <div class="box-circle rounded">
+                <img src="assets/images/circleU.svg" class="card-img-top" alt="...">
+                <img src="assets/images/circle1.svg" class="circle-anm circle-l " alt="...">
+                <img src="assets/images/circle2.svg" class="circle-anm circle-r" alt="...">
+              </div>
+              <div class="card-body">
+                <p class="card-text">Visual Design &#183; Interaction Design &#183; Wireframing &#183; User Flows &#183; Motion Graphics &#183; Web Accesiblity &#183; SEO</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="box-circle rounded">
+                <img src="assets/images/circleS.svg" class="card-img-top" alt="...">
+                <img src="assets/images/circle1.svg" class="circle-anm circle-l " alt="...">
+                <img src="assets/images/circle3.svg" class="circle-anm circle-r" alt="...">
+              </div>
+              <div class="card-body">
+                <p class="card-text">Photoshop &#183; Illustrator &#183; XD &#183; After Effects &#183; Sketch &#183; InVision &#183; Figma &#183; Visual Studio</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="box-circle rounded">
+                <img src="assets/images/circleD.svg" class="card-img-top" alt="...">
+                <img src="assets/images/circle3.svg" class="circle-anm circle-l " alt="...">
+                <img src="assets/images/circle2.svg" class="circle-anm circle-r" alt="...">
+              </div>
+              <div class="card-body">
+                <p class="card-text">HTML &#183; CSS &#183; Bootstrap &#183; Foundtion &#183; SASS &#183; JS &#183; jQuery &#183; GIT &#183; React &#183; Angular &#183; Vue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- CAROUSEL -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide rounded" data-bs-ride="carousel">
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
@@ -113,64 +164,46 @@
 
 
 
-    <!-- CARDS -->
-    <div class="container-fluid my-5 p-3 box-cards">
-      <div class="container">
-        <div class="row align-items-start justify-content-md-center">
-          <div class="col">
-            <div class="card">
-              <img src="assets/images/lamp.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Skills</h5>
-                <p class="card-text">Visual Design &#183; Interaction Design &#183; Wireframing &#183; User Flows &#183; Motion Graphics &#183; Web Accesiblity &#183; SEO</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="assets/images/lamp.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Software</h5>
-                <p class="card-text">Photoshop &#183; Illustrator &#183; XD &#183; After Effects &#183; Sketch &#183; InVision &#183; Figma &#183; Visual Studio</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="assets/images/lamp.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">DEV</h5>
-                <p class="card-text">HTML &#183; CSS &#183; SASS &#183; JS &#183; JQUERY &#183; GIT &#183; React &#183; Angular &#183; Vue</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="container-fluid my-5 p-3 box-cards">
+
+      <!-- CLIENTS -->
+      <!-- <div class="container-fluid my-5 p-3 box-cards">
         <div class="container">
           Some of the clients I have worked with in the past:
         </div>
-      </div>
+      </div> -->
 
     </div>
 
   </div>
 
-  <footer class="container-fluid bg-light">
+  <div class="container-fluid box-footer">
+    <div class="row mx-auto">
+      <div class="col-12 col-md-4 mx-auto-sm"></div>
+      <nav class="col-12 col-md-4 mx-auto-sm">
+        <a href='https://www.linkedin.com/in/swildrick' target='_blank'><img src="assets/images/linkedin.svg" alt='Linkedin Stephen Wildrick' class='footer-icon' /></a>
+        <a href='https://codepen.io/swildrick24' target='_blank'><img src="assets/images/codepen.svg" alt='Codepen Stephen Wildrick' class='footer-icon' /></a>
+        <a href='https://github.com/swildrick' target='_blank'><img src="assets/images/git.svg" alt='Github Stephen Wildrick' class='footer-icon' /></a>
+        <a href='https://www.instagram.com/swildrick24' target='_blank'><img src="assets/images/instagram.svg" alt='Instagram Stephen Wildrick' class='footer-icon' /></a>
+      </nav>
+      <div class="col-12 col-md-4 mx-auto-sm"></div>
+    </div>
+  </div>
+
+  <footer class="container-fluid bg-dark">
     <div class="container box-footer">
       <div class="row mx-auto">
         <div class="col-12 col-md-4 mx-auto-sm"></div>
-        <nav class="col-12 col-md-4 mx-auto-sm ">
-          <a href='https://www.linkedin.com/in/swildrick' target='_blank'><img src="assets/images/linkedin.svg" alt='Linkedin Stephen Wildrick' class='footer-icon' /></a>
-          <a href='https://codepen.io/swildrick24' target='_blank'><img src="assets/images/codepen.svg" alt='Codepen Stephen Wildrick' class='footer-icon' /></a>
-          <a href='https://github.com/swildrick' target='_blank'><img src="assets/images/git.svg" alt='Github Stephen Wildrick' class='footer-icon' /></a>
-          <a href='https://www.instagram.com/swildrick24' target='_blank'><img src="assets/images/instagram.svg" alt='Instagram Stephen Wildrick' class='footer-icon' /></a>
-
-        </nav>
-        <div class="col-12 col-md-4 mx-auto-sm py-2 text-center text-md-end txt-footer">&#169; 2021 Stephen Wildrick</div>
+        <div class="col-12 col-md-4 mx-auto-sm py-2 text-center txt-footer">
+          Phone: 602.670.3938
+          &#183;
+          Email: swildrick@gmail.com
+          &#183;
+          &#169; 2021 Stephen Wildrick
+        </div>
+        <div class="col-12 col-md-4 mx-auto-sm"></div>
+      </div>
     </div>
-  </div>
   </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
