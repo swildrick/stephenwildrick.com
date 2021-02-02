@@ -29,7 +29,7 @@ nav .nav-link {
     color:#212529;
     padding:0;
     opacity:.5;
-    transition: opacity .7s;
+    transition: opacity 1s;
 }
 
 nav .nav-link:hover {
@@ -42,7 +42,6 @@ nav .nav-link:hover {
     margin:0 auto;
     width:200px;
     height:auto;
-    margin-top:250px;
 
 }
 
@@ -54,18 +53,18 @@ nav .nav-link:hover {
 .img-hero {
     background: #ffffff url("../images/hero.jpg") no-repeat center top;
     background-size:cover;
-    min-height:600px;
+    min-height:200px;
 }
 
 /* CAROUSEL */
 .carousel {
-    margin:1.5rem auto;
+    /* margin:1.5rem auto; */
     background-color: #212529;
-    padding:2rem 1rem;
+    /* padding:2rem 1rem; */
 }
 
-.d-block {
-    padding-bottom:180px;
+.carousel-caption {
+    bottom:-1rem;
 }
 
 
