@@ -2,8 +2,8 @@ body
 {
     margin:0 auto;
     width:100%;
-    color:#fff;
-    font-family:arial, sans-serif;
+    color:#212529;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 12pt;
     text-align: center;
     /* background-color: #001B3A; */
@@ -40,7 +40,7 @@ nav .nav-link:hover {
 .sw-logo {
     display: block;
     margin:0 auto;
-    width:200px;
+    width:160px;
     height:auto;
 
 }
@@ -51,9 +51,10 @@ nav .nav-link:hover {
 }
 
 .img-hero {
-    background: #ffffff url("../images/hero.jpg") no-repeat center top;
-    background-size:cover;
-    min-height:200px;
+    /* background: #ffffff url("../images/hero.jpg") no-repeat center top; */
+    /* background-size:cover; */
+    background-color: #212529;
+    min-height:250px;
 }
 
 /* CAROUSEL */
