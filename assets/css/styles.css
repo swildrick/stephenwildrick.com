@@ -14,10 +14,6 @@ p {
     font-size:12px;
 }
 
-.bg-blue {
-    background-color: #00224B;
-}
-
 /* NAV */
 nav {
     max-width:1280px;
@@ -28,7 +24,7 @@ nav {
 nav .nav-link {
     color:#212529;
     padding:0;
-    opacity:.5;
+    opacity:.8;
     transition: opacity 1s;
 }
 
@@ -37,37 +33,36 @@ nav .nav-link:hover {
 }
 
 /* HERO */
+.img-hero {
+    background-color: #212529;
+    min-height:250px;
+}
+
 .sw-logo {
     display: block;
     margin:0 auto;
     width:160px;
     height:auto;
-
 }
 
+.form-background {
+    background-color: #555;
+}
+
+/* INNER SHELL */
 .box-holder {
-    max-width:1280px;
     margin:0 auto;
-}
-
-.img-hero {
-    /* background: #ffffff url("../images/hero.jpg") no-repeat center top; */
-    /* background-size:cover; */
     background-color: #212529;
-    min-height:250px;
 }
 
 /* CAROUSEL */
 .carousel {
-    /* margin:1.5rem auto; */
-    background-color: #212529;
-    /* padding:2rem 1rem; */
+    max-width:1280px;
 }
 
 .carousel-caption {
     bottom:-1rem;
 }
-
 
 /* CARDS */
 .card {
@@ -76,6 +71,7 @@ nav .nav-link:hover {
     margin:0 auto;
     border:0;
 }
+
 .box-circle {
     width:300px;
     margin:0 auto;
@@ -98,7 +94,6 @@ nav .nav-link:hover {
     z-index: 0;
     margin:auto;
     width:240px;
-
 }
 
 .circle-l {
