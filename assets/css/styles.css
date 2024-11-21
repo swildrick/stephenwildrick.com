@@ -16,16 +16,15 @@ p {
 
 /* NAV */
 nav {
-    max-width:1280px;
     margin:0 auto;
-    padding:2rem 0 .3rem;
 }
 
 nav .nav-link {
-    color:#212529;
+    color:#ffffff;
     padding:0;
-    opacity:.8;
+    opacity:.2;
     transition: opacity 1s;
+    /* background-color: #ccc; */
 }
 
 nav .nav-link:hover {
@@ -35,7 +34,7 @@ nav .nav-link:hover {
 /* HERO */
 .img-hero {
     background-color: #212529;
-    min-height:250px;
+    padding:15px 15px 0;
 }
 
 .sw-logo {
