@@ -4,44 +4,70 @@ body
     width:100%;
     color:#212529;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 12pt;
+    font-size: 1rem;
     text-align: center;
-    /* background-color: #001B3A; */
 }
 
 /* GENERAL */
 p { 
-    font-size:12px;
+    font-size:1rem;
+}
+
+.img-hero p {
+    color:#fff;
+    display:inline-block;
+}
+
+.sw-logo {
+    display:inline-block;
+    width:2.5rem;
+    height:auto;
+    margin:1rem
 }
 
 /* NAV */
 nav {
+    background-color: #212529;
+    padding:.8rem 0 0rem;
+}
+
+nav .box {
+    display:inline-block;
     margin:0 auto;
 }
 
-nav .nav-link {
-    color:#ffffff;
-    padding:0;
-    opacity:.2;
-    transition: opacity 1s;
-    /* background-color: #ccc; */
+nav .box .line {    
+    display:block;
+    background-color: red;
+    height:1px;
+    transition: width 0.2s;
+    width:0;
 }
 
-nav .nav-link:hover {
+nav .box:hover .line {
+    width:100%;
+}
+
+nav .box .nav-link {
+    color:#ffffff;
+    padding:0 !important;
+    opacity:.6;
+    transition: opacity 1s;
+    font-size:.8rem;
+}
+
+nav .box .nav-link:hover {
     opacity:1;
 }
+
+
+
+
 
 /* HERO */
 .img-hero {
     background-color: #212529;
-    padding:15px 15px 0;
-}
-
-.sw-logo {
-    display: block;
-    margin:0 auto;
-    width:160px;
-    height:auto;
+    padding:6px 15px 0;
 }
 
 .form-background {
