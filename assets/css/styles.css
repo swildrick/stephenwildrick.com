@@ -67,7 +67,7 @@ nav .box .nav-link:hover {
 /* HERO */
 .img-hero {
     background-color: #212529;
-    padding:6px 15px 0;
+    padding:6px 40px 0;
 }
 
 .form-background {
@@ -86,7 +86,7 @@ nav .box .nav-link:hover {
 }
 
 .carousel-caption {
-    bottom:-1rem;
+    bottom:-4rem;
 }
 
 /* CARDS */
@@ -145,10 +145,15 @@ nav .box .nav-link:hover {
     100% {transform: rotate(360deg);}
   }
 
+.form_box {
+    display:none;
+}
+
 /* FOOTER */
 footer {
     margin:20px auto 0;
     padding:10px;
+    width:100%;
 }
 
 .txt-footer {
