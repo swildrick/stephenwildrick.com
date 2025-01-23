@@ -20,15 +20,34 @@ p {
 
 .sw-logo {
     display:inline-block;
-    width:2.5rem;
+    width:100%;
     height:auto;
-    margin:1rem
+    margin:0;
+}
+
+.cover_box {
+    height:28rem;
+    position:relative;
+    background-image: url("/assets/images/cover_tree.jpg");
+    background-position: center;
+}
+
+.sw_box {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.sw_box h5 {
+    color:#fff;
 }
 
 /* NAV */
 nav {
-    background-color: #212529;
-    padding:.8rem 0 0rem;
+    background-color: #fff;
+    padding:.8rem 0;
 }
 
 nav .box {
@@ -49,7 +68,7 @@ nav .box:hover .line {
 }
 
 nav .box .nav-link {
-    color:#ffffff;
+    color:#212529;
     padding:0 !important;
     opacity:.6;
     transition: opacity 1s;
@@ -67,17 +86,34 @@ nav .box .nav-link:hover {
 /* HERO */
 .img-hero {
     background-color: #212529;
-    padding:6px 40px 0;
+    padding:0;
 }
 
 .form-background {
     background-color: #555;
 }
 
+.box_work {
+    background-color:#ccc;
+    /* height:40rem; */
+    padding:0;
+    margin:0;
+}
+
+
+.work {
+    margin:2rem auto;
+}
+
+.work h6 {
+    padding-top: 1rem;
+}
+
 /* INNER SHELL */
 .box-holder {
     margin:0 auto;
     background-color: #212529;
+    display:none;
 }
 
 /* CAROUSEL */
@@ -90,17 +126,22 @@ nav .box .nav-link:hover {
 }
 
 /* CARDS */
+
+.box-cards {
+    background-color: #ccc;
+}
+
 .card {
     color:#555;
     width:320px;
     margin:0 auto;
     border:0;
+    background-color: #ccc;
 }
 
 .box-circle {
     width:300px;
     margin:0 auto;
-    background-color: #fff;
     padding:38px;
     position: relative;
 }
