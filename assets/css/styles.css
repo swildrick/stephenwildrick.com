@@ -18,15 +18,15 @@ p {
     display:inline-block;
 }
 
-.sw-logo {
+.sw_logo {
     display:inline-block;
-    width:100%;
+    width:300px;
     height:auto;
     margin:0;
 }
 
 .cover_box {
-    height:28rem;
+    height:24rem;
     position:relative;
     background-image: url("/assets/images/cover_tree.jpg");
     background-position: center;
@@ -102,11 +102,11 @@ nav .box .nav-link:hover {
 
 
 .work {
-    margin:2rem auto;
+    margin:1rem auto;
 }
 
 .work h6 {
-    padding-top: 1rem;
+    padding-top: 0.8rem;
 }
 
 /* INNER SHELL */
@@ -128,15 +128,17 @@ nav .box .nav-link:hover {
 /* CARDS */
 
 .box-cards {
-    background-color: #ccc;
+    background: rgb(69,147,184);
+    background: linear-gradient(0deg, rgba(69,147,184,1) 0%, rgba(181,180,189,1) 21%, rgba(0,212,255,1) 100%);
 }
 
 .card {
-    color:#555;
-    width:320px;
-    margin:0 auto;
+    color:#000;
+    width:80%;
+    height:25rem;
+    margin:0.5rem auto;
     border:0;
-    background-color: #ccc;
+    background-color: transparent;;
 }
 
 .box-circle {
