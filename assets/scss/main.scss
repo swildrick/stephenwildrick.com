@@ -13,7 +13,7 @@ $secondary-color:#f7f7f7;
 $primary-font-size:1rem;
 $secondary-font-size:0.8rem;
 
-
+/* GENERAL */
 body
 {
     margin:0 auto;
@@ -24,51 +24,58 @@ body
     text-align: center;
 }
 
-/* GENERAL */
 p { 
     font-size:$primary-font-size;
 }
 
 /* NAV */
 nav {
-    background-color:$white;
-    padding:.8rem 0;
-}
-
-nav .box {
-    display:inline-block;
+    max-width:80rem;
     margin:0 auto;
 }
 
-nav .box .line {    
-    display:block;
+.nav_logo {
+    width:2.5rem;
+    margin-left:2rem;
+}
+
+
+nav .nav-item {
+    margin:1rem;
+    padding:0;
+}
+
+nav .nav-item .line {  
+    display:block;  
     background-color:$red;
     height:1px;
     transition: width 0.2s;
     width:0;
 }
 
-nav .box:hover .line {
+nav .nav-item:hover .line {
     width:100%;
 }
 
-nav .box .nav-link {
+nav .navbar-nav .nav-link {
+    display:inline-block;
     color:$primary-color;
-    padding:0 !important;
     opacity:.6;
     transition: opacity 1s;
-    font-size:$secondary-font-size;
+    font-size:$primary-font-size;
+    padding:0 !important;
 }
 
-nav .box .nav-link:hover {
+nav .navbar-nav .nav-link:hover {
     opacity:1;
+}
+
+.navbar-collapse {
+    justify-content:right;
 }
 
 
 /* HERO */
-.img-hero {
-    padding:0;
-}
 
 .img-hero p {
     color:$white;
@@ -109,6 +116,7 @@ nav .box .nav-link:hover {
     border-radius: 8px;
     transition: background-color .6s;
     cursor:pointer;
+    margin:1rem;
 }
 
 .work:hover {
@@ -131,7 +139,7 @@ nav .box .nav-link:hover {
     font-size:$secondary-font-size;
 }
 
-/* CARDS */
+/* SKILLS */
 .box_cards {
     background-color: $light-gray;
 }
@@ -193,6 +201,12 @@ nav .box .nav-link:hover {
 @keyframes circle_anm_r {
     0%   {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+  }
+
+/* CONTACT */
+  .box-contact {
+    background-color: $white;
+    padding:2rem 0;
   }
 
 
