@@ -37,8 +37,8 @@ nav {
 .nav_logo {
     width:2.5rem;
     margin-left:2rem;
+    opacity:0.5;
 }
-
 
 nav .nav-item {
     margin:1rem;
@@ -60,7 +60,7 @@ nav .nav-item:hover .line {
 nav .navbar-nav .nav-link {
     display:inline-block;
     color:$primary-color;
-    opacity:.6;
+    opacity:0.8;
     transition: opacity 1s;
     font-size:$primary-font-size;
     padding:0 !important;
@@ -76,7 +76,6 @@ nav .navbar-nav .nav-link:hover {
 
 
 /* HERO */
-
 .img-hero p {
     color:$white;
     display:inline-block;
@@ -110,6 +109,10 @@ nav .navbar-nav .nav-link:hover {
 
 
 /* WORK */
+
+.work_box {
+    max-width:80rem;
+}
 .work {
     padding:1rem 1rem 0.5rem;
     background-color: rgba(220, 220, 220, 0.2);
@@ -145,7 +148,6 @@ nav .navbar-nav .nav-link:hover {
 }
 
 .card {
-    width:80%;
     height:25rem;
     margin:0.5rem auto;
     border:0;
