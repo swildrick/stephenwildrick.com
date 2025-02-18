@@ -73,16 +73,13 @@ nav .navbar-nav .nav-link:hover {
 
 .sw_box {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
 .sw_box .sw_logo {
   display: inline-block;
-  width: 18rem;
-  height: auto;
   margin: 0;
 }
 
@@ -102,6 +99,7 @@ nav .navbar-nav .nav-link:hover {
   transition: background-color 0.6s;
   cursor: pointer;
   margin: 1rem;
+  display: block;
 }
 
 .work:hover {
@@ -221,6 +219,22 @@ footer {
 
 .footer-icon:hover {
   opacity: 1;
+}
+
+.box_story {
+  width: 40rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* PORTFOLIO */
+.btn_back {
+  width: 2rem;
+  opacity: 0.2;
+}
+
+.sun_home {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
