@@ -91,7 +91,7 @@ nav .navbar-nav .nav-link:hover {
 
 .sw_box {
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -99,6 +99,7 @@ nav .navbar-nav .nav-link:hover {
 .sw_box .sw_logo {
     display:inline-block;
     margin:0;
+    max-width: 22rem;
 }
 
 .sw_box h5 {
@@ -112,7 +113,7 @@ nav .navbar-nav .nav-link:hover {
     max-width:80rem;
 }
 .work {
-    padding:1rem 1rem 0.5rem;
+    padding:1rem 1rem 2rem;
     background-color: rgba(220, 220, 220, 0.2);
     border-radius: 8px;
     transition: background-color .6s;
@@ -130,7 +131,7 @@ nav .navbar-nav .nav-link:hover {
 }
 
 .work h6 {
-    padding: 1rem 0 0 0.5rem;
+    padding: 1.5rem 0 0 0.5rem;
     text-align:left;
 }
 
@@ -141,10 +142,36 @@ nav .navbar-nav .nav-link:hover {
     font-size:$secondary-font-size;
 }
 
+
 /* SKILLS */
 .box_cards {
-    background-color: $light-gray;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
+
+.frame_holder {
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+.frame_holder_sunnova {
+    background-color: #000;
+    position: relative;
+}
+
+.frame_black {
+    background-color:#000;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+#video_frame {
+    margin:2rem auto;
+    display:block;
+}
+
+.box_portfolio p {
+    line-height: 1.5rem;
+}
+
 
 .card {
     height:25rem;
@@ -156,6 +183,7 @@ nav .navbar-nav .nav-link:hover {
 .card p {
     font-size:$secondary-font-size;
 }
+
 
 .box_circle {
     width:300px;
