@@ -28,11 +28,18 @@ p {
     font-size:$primary-font-size;
 }
 
+.boldonse-regular {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 
 /* NAV */
 nav {
     max-width:80rem;
-    margin:0 auto;
+    margin:1px auto;
+
 }
 
 .nav_logo {
@@ -111,6 +118,7 @@ nav .navbar-nav .nav-link:hover {
 
 .work_box {
     max-width:80rem;
+    margin:4rem auto;
 }
 .work {
     padding:1rem 1rem 2rem;
@@ -234,16 +242,36 @@ nav .navbar-nav .nav-link:hover {
 
 /* CONTACT */
   .box-contact {
-    background-color: $white;
-    padding:2rem 0;
+    background-color: #343A40;
+    background-image: 
+      repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 5px),
+      repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 5px);
+    padding:4rem 0;
+    color:$white
   }
 
+  .box-contact p {
+    font-size:0.8rem;
+  }
+
+  .contact-icon {
+    // padding-bottom:1rem;
+    width:45px;
+    height:45px;
+    opacity:.5;
+    transition: opacity .5s;
+  }
+
+  .contact-icon:hover {
+    opacity:1;
+}
 
 /* FOOTER */
 footer {
-    margin:20px auto 0;
-    padding:10px;
+    margin:0 auto;
+    padding:1rem;
     width:100%;
+    background-color: #000;
 }
 
 .txt-footer {
@@ -253,8 +281,8 @@ footer {
 
 .footer-icon {
     margin:0 10px;
-    width:20px;
-    height:20px;
+    width:25px;
+    height:25px;
     opacity:.5;
     transition: opacity .5s;
 }
