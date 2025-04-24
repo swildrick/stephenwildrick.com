@@ -92,25 +92,67 @@ nav .navbar-nav .nav-link:hover {
 .cover_box {
     height:24rem;
     position:relative;
-    background-image: url("/assets/images/cover_tree.jpg");
-    background-position: center;
+    background-color: #000;
+}
+
+.cover_box .row {
+    max-width:85rem;
+}
+
+.cover_box .holder {
+    position: absolute;
+    top:45%;
+    left:0;
+    right:0;
+    margin:auto;
+    color:white;
+    font-size: 4rem;
+    width:16rem;
+}
+
+.cover_box .holder h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: Bold;
+    font-style: normal;
+    letter-spacing: 0.05rem;
+    margin:0 auto;
+    
+}
+
+.cover_box .holder h6 {
+    font-size:0.8rem;
+    margin:0 auto;
 }
 
 .sw_box {
+    position: relative;
+    max-width: 30rem;
+    height:24rem;
+    margin:0 auto;
+}
+
+.sw_box .sw_design {
     position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left:-8%;
+    bottom:0;
+    z-index:0;
 }
 
-.sw_box .sw_logo {
-    display:inline-block;
-    margin:0;
-    max-width: 22rem;
+.sw_box .swrobot {
+    position:absolute;
+    bottom:0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 30rem;
+    z-index:1;
 }
 
-.sw_box h5 {
-    color:$white;
+.sw_box .sw_code {  
+    position: absolute;
+    left:40%;
+    bottom:0;
+    z-index:0;
 }
 
 

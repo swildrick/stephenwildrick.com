@@ -21,4 +21,21 @@ $(document).ready(function(){
         });
       } // End if
     });
+
+    // const sw_design = document.querySelector('.sw_design'),
+    // swrobot = document.querySelector('.swrobot'),
+    // sw_code = document.querySelector('.sw_code'),
+    // root = document.documentElement;
+
+    // root.addEventListener('mousemove', (e) => {
+    // const x = e.clientX,
+    //       y = e.clientY;
+    // sw_design.style.transform = `translate(${x / -60}px,0)`;
+    // swrobot.style.transform = `translate(${x / 80}px,0)`;
+    // sw_code.style.transform = `translate(${x / 50}px,0)`;
+
+    // console.log();
+});
+
+
   });
