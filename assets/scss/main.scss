@@ -19,7 +19,7 @@ body
     margin:0 auto;
     width:100%;
     color:$primary-color;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: $primary-font-size;
     text-align: center;
 }
@@ -28,11 +28,14 @@ p {
     font-size:$primary-font-size;
 }
 
-.boldonse-regular {
-    font-family: "Boldonse", system-ui;
-    font-weight: 400;
+h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
     font-style: normal;
-  }
+    letter-spacing: 0.05rem;
+    margin: 0 auto;
+    }
 
 
 /* NAV */
@@ -93,6 +96,8 @@ nav .navbar-nav .nav-link:hover {
     height:24rem;
     position:relative;
     background-color: #000;
+    overflow:hidden;
+
 }
 
 .cover_box .row {
@@ -139,12 +144,12 @@ nav .navbar-nav .nav-link:hover {
     z-index:0;
 }
 
-.sw_box .swrobot {
+.sw_box .sw_profile {
     position:absolute;
     bottom:0;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    width: 30rem;
+    width: 27rem;
     z-index:1;
 }
 
@@ -153,6 +158,12 @@ nav .navbar-nav .nav-link:hover {
     left:40%;
     bottom:0;
     z-index:0;
+}
+
+
+/*ABOUT*/
+.box-bio {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 
@@ -196,10 +207,6 @@ nav .navbar-nav .nav-link:hover {
 /* SKILLS */
 .box_cards {
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-
-.frame_holder {
-    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
 }
 
 .frame_holder_sunnova {
