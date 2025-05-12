@@ -38,6 +38,11 @@ h1 {
     }
 
 
+    .line_art {
+
+    }
+
+
 /* NAV */
 nav {
     max-width:80rem;
@@ -147,8 +152,8 @@ nav .navbar-nav .nav-link:hover {
 .sw_box .sw_profile {
     position:absolute;
     bottom:0;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-48%);
     width: 27rem;
     z-index:1;
 }

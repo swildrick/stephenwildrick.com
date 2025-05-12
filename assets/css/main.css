@@ -126,7 +126,7 @@ nav .navbar-nav .nav-link:hover {
 .sw_box .sw_profile {
   position: absolute;
   bottom: 0;
-  transform: translateX(-50%);
+  transform: translateX(-48%);
   width: 27rem;
   z-index: 1;
 }
