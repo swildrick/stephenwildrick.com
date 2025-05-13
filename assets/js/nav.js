@@ -22,20 +22,30 @@ $(document).ready(function(){
       } // End if
     });
 
-    // const sw_design = document.querySelector('.sw_design'),
-    // swrobot = document.querySelector('.swrobot'),
-    // sw_code = document.querySelector('.sw_code'),
-    // root = document.documentElement;
+    const sw_design = document.querySelector('.sw_design'),
+    sw_profile = document.querySelector('.sw_profile'),
+    sw_code = document.querySelector('.sw_code'),
+    root = document.documentElement;
 
-    // root.addEventListener('mousemove', (e) => {
-    // const x = e.clientX,
-    //       y = e.clientY;
-    // sw_design.style.transform = `translate(${x / -60}px,0)`;
-    // swrobot.style.transform = `translate(${x / 80}px,0)`;
-    // sw_code.style.transform = `translate(${x / 50}px,0)`;
+    root.addEventListener('mousemove', (e) => {
+      const x = e.clientX,
+            y = e.clientY;
+      sw_design.style.transform = `translate(${x / -60}px,0)`;
+      sw_profile.style.transform = `translate(${x / -20 -180}px, 0)`;
+      sw_code.style.transform = `translate(${x / -40}px,0)`;
 
-    // console.log();
+      
+
+      if(x<739){
+        gsap.to(".de", {alpha: 1, duration: 1});
+        gsap.to(".co", {alpha: 0.2, duration: 1});
+      }
+      else {
+        gsap.to(".de", {alpha: 0.2, duration: 1});
+        gsap.to(".co", {alpha: 1, duration: 1});
+      }
+
+    });
+
+
 });
-
-
-  });
