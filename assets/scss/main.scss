@@ -100,8 +100,14 @@ nav .navbar-nav .nav-link:hover {
 .cover_box {
     height:24rem;
     position:relative;
-    background-color: #000;
+    // background-color: #000;
     overflow:hidden;
+
+    background: #000000;
+    background: linear-gradient(
+      to right,
+      #000000,#434343
+    );
 
 }
 
@@ -151,10 +157,10 @@ nav .navbar-nav .nav-link:hover {
 
 .sw_box .sw_profile {
     position:absolute;
-    bottom:0;
+    bottom:0%;
     -webkit-transform: translateX(-40%);
     transform: translateX(-48%);
-    width: 27rem;
+    width: 24rem;
     z-index:1;
 }
 
