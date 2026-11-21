@@ -1,0 +1,19 @@
+# Serve index.html before any leftover index.htm
+DirectoryIndex index.html
+
+# Old URLs -> new locations (301 = permanent, so search engines update too)
+Redirect 301 /index.htm /
+Redirect 301 /pages/about.html /
+Redirect 301 /pages/gm.html /pages/work/gm.html
+Redirect 301 /pages/kia.html /pages/work/kia.html
+Redirect 301 /pages/lipton.html /pages/work/lipton.html
+Redirect 301 /pages/makutu.html /pages/work/makutu.html
+Redirect 301 /pages/mtd.html /pages/work/mtd.html
+Redirect 301 /pages/park.html /pages/work/park.html
+Redirect 301 /pages/suess.html /pages/work/suess.html
+Redirect 301 /pages/sunnova.html /pages/work/sunnova.html
+Redirect 301 /assets/stephen_wildrick_resume.pdf /assets/stephen-wildrick-resume.pdf
+
+# Removed contact form: redirect even if the old files are still on the server
+Redirect 301 /process.php /pages/contact.html
+Redirect 301 /thanks.htm /pages/contact.html

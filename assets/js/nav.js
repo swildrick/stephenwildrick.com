@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', () => {
   // Homepage hero only
   const coverBox = document.querySelector('.cover_box');
   if (typeof gsap === 'undefined' || !coverBox) return;

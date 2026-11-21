@@ -427,3 +427,21 @@ footer {
   line-height: 1.3;
   z-index: 2;
 }
+
+/* Same look as an h1, for display text that isn't the page's main heading */
+.h1-style {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05rem;
+  margin: 0 auto;
+}
+
+/* Case study titles: the page's h1, styled like the original h2 */
+h1.story_title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: normal;
+  margin: 0 0 0.5rem;
+}
