@@ -4,14 +4,18 @@
 $font-stack: Helvetica, Arial;
 $primary-color: #333;
 
+$black:#000;
 $white:#fff;
 $light-gray:#ccc;
-$red:#ff0000;
+$lighter-gray:#ddd;
 $primary-color:#212529;
 $secondary-color:#f7f7f7;
+$red:#ff0000;
 
 $primary-font-size:1rem;
 $secondary-font-size:0.8rem;
+
+$time:0.8s;
 
 /* GENERAL */
 body
@@ -35,60 +39,51 @@ h1 {
     font-style: normal;
     letter-spacing: 0.05rem;
     margin: 0 auto;
-    }
-
-
-    .line_art {
-
-    }
-
+}
 
 /* NAV */
-nav {
+.navbar {
     max-width:80rem;
-    margin:1px auto;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    padding:1rem 2rem;
 
+    .nav_logo {
+        width:2rem;
+        opacity:0.6;
+    }
+
+    .nav_logo:hover  {
+        opacity:1;
+        transition: opacity $time;
+    }
+
+    .nav-holder {
+        display:flex;
+        justify-content:flex-end;
+    }
+
+    .navbar-nav {
+        a {
+            text-decoration: none;
+        }
+        .nav-item {
+            color:$primary-color;
+            margin:0.4rem;
+            padding:0.4rem 0.8rem;
+            border:2px solid $light-gray;
+            border-radius: 0.6rem;
+            background-color:$secondary-color;
+            transition: background-color $time;
+        }
+
+        .nav-item:hover {
+            background-color: $lighter-gray;
+        }
+    }
 }
 
-.nav_logo {
-    width:2.5rem;
-    margin-left:2rem;
-    opacity:0.5;
-}
-
-nav .nav-item {
-    margin:1rem;
-    padding:0;
-}
-
-nav .nav-item .line {  
-    display:block;  
-    background-color:$red;
-    height:1px;
-    transition: width 0.2s;
-    width:0;
-}
-
-nav .nav-item:hover .line {
-    width:100%;
-}
-
-nav .navbar-nav .nav-link {
-    display:inline-block;
-    color:$primary-color;
-    opacity:0.8;
-    transition: opacity 1s;
-    font-size:$primary-font-size;
-    padding:0 !important;
-}
-
-nav .navbar-nav .nav-link:hover {
-    opacity:1;
-}
-
-.navbar-collapse {
-    justify-content:right;
-}
 
 
 /* HERO */
@@ -100,13 +95,12 @@ nav .navbar-nav .nav-link:hover {
 .cover_box {
     height:24rem;
     position:relative;
-    // background-color: #000;
     overflow:hidden;
 
-    background: #000000;
+    background: $black;
     background: linear-gradient(
       to right,
-      #000000,#434343
+      $black,#434343
     );
 
 }
@@ -146,6 +140,13 @@ nav .navbar-nav .nav-link:hover {
     max-width: 30rem;
     height:24rem;
     margin:0 auto;
+
+    h1 {
+        color:$white;
+        position: absolute;
+        top:50%;
+        width:100%;
+    }
 }
 
 .sw_box .sw_design {
@@ -157,10 +158,10 @@ nav .navbar-nav .nav-link:hover {
 
 .sw_box .sw_profile {
     position:absolute;
-    bottom:0%;
+    bottom:15%;
     -webkit-transform: translateX(-40%);
     transform: translateX(-48%);
-    width: 24rem;
+    width: 15rem;
     z-index:1;
 }
 
@@ -171,27 +172,49 @@ nav .navbar-nav .nav-link:hover {
     z-index:0;
 }
 
-
-.video_tron3 {
-    width:100%;
-    position: absolute;
-    top:-260px;
-    left:0;
-}
-
+// .video_tron3 {
+//     width:100%;
+//     position: absolute;
+//     top:-260px;
+//     left:0;
+// }
 
 /*ABOUT*/
-.box-bio {
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
+.frame_holder {
+    background-color: #111;
+    padding:4rem;
+    
+    .bg_profile {
+        border-radius: 0.6rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
 
-.about_photo {
-  width:80%;
+        .sw_photo {
+            height:16rem;
+            margin:0 auto;
+            display: block;
+            background-color: $black;
+            padding:0.5rem 2rem 0 2rem;
+            border-radius: 0.6rem;
+        }
+    }
+
+    .text-left {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.6rem;
+        padding:3rem 2rem 3rem 1rem;
+        p{
+            color:#fcfcfc;
+            font-size:0.8rem;
+        }
+    }
 }
 
 
 /* WORK */
-
 .work_box {
     max-width:80rem;
     margin:4rem auto;
@@ -200,7 +223,7 @@ nav .navbar-nav .nav-link:hover {
     padding:1rem 1rem 2rem;
     background-color: rgba(220, 220, 220, 0.2);
     border-radius: 8px;
-    transition: background-color .6s;
+    transition: background-color $time;
     cursor:pointer;
     margin:1rem;
     display:block;
@@ -226,6 +249,20 @@ nav .navbar-nav .nav-link:hover {
     font-size:$secondary-font-size;
 }
 
+.btn-work {
+    display:block;
+    color:$primary-color;
+    padding:0.4rem 0.8rem;
+    //border:2px solid $light-gray;
+    border-radius: 0.6rem;
+    background-color:$secondary-color;
+    transition: background-color $time;
+}
+
+.btn-work.btn-work:hover {
+    background-color: $lighter-gray;
+}
+
 
 /* SKILLS */
 .box_cards {
@@ -233,12 +270,12 @@ nav .navbar-nav .nav-link:hover {
 }
 
 .frame_holder_sunnova {
-    background-color: #000;
+    background-color: $black;
     position: relative;
 }
 
 .frame_black {
-    background-color:#000;
+    background-color:$black;
     text-align: center;
     border-radius: 1rem;
     padding:4rem 0;
@@ -253,12 +290,11 @@ nav .navbar-nav .nav-link:hover {
     line-height: 1.5rem;
 }
 
-
 .card {
     height:25rem;
-    margin:0.5rem auto;
+    margin:2rem auto;
     border:0;
-    background-color: transparent;;
+    background-color: transparent;
 }
 
 .card p {
@@ -315,12 +351,12 @@ nav .navbar-nav .nav-link:hover {
 
 /* CONTACT */
   .box-contact {
-    background-color: #343A40;
-    background-image: 
-      repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 5px),
-      repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 5px);
+    background-color: $white;
+    // background-image: 
+    //   repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 5px),
+    //   repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 5px);
     padding:4rem 0;
-    color:$white
+    color:$black;
   }
 
   .box-contact p {
@@ -328,11 +364,10 @@ nav .navbar-nav .nav-link:hover {
   }
 
   .contact-icon {
-    // padding-bottom:1rem;
-    width:45px;
-    height:45px;
+    width:3rem;
+    height:3rem;
     opacity:.5;
-    transition: opacity .5s;
+    transition: opacity $time;
   }
 
   .contact-icon:hover {
@@ -344,7 +379,7 @@ footer {
     margin:0 auto;
     padding:1rem;
     width:100%;
-    background-color: #000;
+    background-color: $black;
 }
 
 .txt-footer {
@@ -353,11 +388,11 @@ footer {
 }
 
 .footer-icon {
-    margin:0 10px;
-    width:25px;
-    height:25px;
+    margin:0 0.6rem;
+    width:1.5rem;
+    height:1.5rem;
     opacity:.5;
-    transition: opacity .5s;
+    transition: opacity $time;
 }
 
 .footer-icon:hover {
@@ -378,4 +413,17 @@ footer {
 
 .sun_home {
     width:100%;
+}
+
+/* Mobile headline under the profile illustration (hero side text is hidden below lg) */
+.sw_box .sw_tagline {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  z-index: 2;
 }
