@@ -1,4 +1,9 @@
 /* GENERAL */
+/* Always reserve scrollbar space so the layout doesn't shift between short and long pages */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -22,39 +27,220 @@ h1 {
 }
 
 /* NAV */
-.navbar {
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 80rem;
   margin: 0 auto;
+  padding: 1.25rem 2rem;
+}
+.site-nav__home {
+  display: block;
+  line-height: 0;
+  color: #6c757d;
+  transition: color 0.2s;
+}
+.site-nav__home:hover {
+  color: #212529;
+}
+.site-nav__links {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  align-items: center;
+  gap: 2rem;
 }
-.navbar .nav_logo {
-  width: 2rem;
-  opacity: 0.6;
+.site-nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s;
 }
-.navbar .nav_logo:hover {
-  opacity: 1;
-  transition: opacity 0.8s;
-}
-.navbar .nav-holder {
-  display: flex;
-  justify-content: flex-end;
-}
-.navbar .navbar-nav a {
+.site-nav__link:hover {
+  color: #212529;
   text-decoration: none;
 }
-.navbar .navbar-nav .nav-item {
+.site-nav__link[aria-current="page"] {
   color: #212529;
-  margin: 0.4rem;
-  padding: 0.4rem 0.8rem;
-  border: 2px solid #ccc;
-  border-radius: 0.6rem;
-  background-color: #f7f7f7;
-  transition: background-color 0.8s;
 }
-.navbar .navbar-nav .nav-item:hover {
-  background-color: #ddd;
+.site-nav__link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: currentColor;
+}
+/* Sliding underline (added by site-nav.js; the ::after underline above is the no-JS fallback) */
+.site-nav__links {
+  position: relative;
+}
+.site-nav__indicator {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #212529;
+  opacity: 0;
+  pointer-events: none;
+}
+.site-nav__indicator.is-animated {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+.site-nav.has-indicator .site-nav__link[aria-current="page"]::after {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-nav__indicator.is-animated {
+    transition: none;
+  }
+}
+.site-nav__home:focus-visible,
+.site-nav__link:focus-visible {
+  outline: 2px solid #212529;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+@media (max-width: 575.98px) {
+  .site-nav {
+    padding: 1rem;
+  }
+  .site-nav__links {
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile menu (below 768px, only when site-nav.js runs) */
+.site-nav__toggle {
+  display: none;
+}
+html.menu-open {
+  overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .site-nav.has-js .site-nav__home {
+    position: relative;
+    z-index: 1001;
+  }
+  /* Menu button: three lines that animate into an X and back */
+  .site-nav.has-js .site-nav__toggle {
+    display: block;
+    position: relative;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    margin-right: -10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .site-nav.has-js .site-nav__toggle:hover,
+  .site-nav.is-open .site-nav__toggle {
+    color: #212529;
+  }
+  .site-nav__toggle:focus-visible {
+    outline: 2px solid #212529;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .site-nav__toggle span {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 1.5px;
+    border-radius: 1px;
+    background-color: currentColor;
+    /* Closing: un-rotate first, then spread back out */
+    transition: top 0.15s ease 0.15s, transform 0.15s ease 0s, opacity 0.1s ease 0.15s;
+  }
+  .site-nav__toggle span:nth-child(1) {
+    top: 13px;
+  }
+  .site-nav__toggle span:nth-child(2) {
+    top: 19.25px;
+  }
+  .site-nav__toggle span:nth-child(3) {
+    top: 25.5px;
+  }
+  .site-nav.is-open .site-nav__toggle span {
+    /* Opening: come together first, then rotate into an X */
+    transition: top 0.15s ease 0s, transform 0.15s ease 0.15s, opacity 0.1s ease 0s;
+  }
+  .site-nav.is-open .site-nav__toggle span:nth-child(1) {
+    top: 19.25px;
+    transform: rotate(45deg);
+  }
+  .site-nav.is-open .site-nav__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .site-nav.is-open .site-nav__toggle span:nth-child(3) {
+    top: 19.25px;
+    transform: rotate(-45deg);
+  }
+  /* Full-screen overlay */
+  .site-nav.has-js .site-nav__links {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.75rem;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+  }
+  .site-nav.is-open .site-nav__links {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s;
+  }
+  .site-nav.has-js .site-nav__link {
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: color 0.2s, opacity 0.3s ease, transform 0.3s ease;
+  }
+  .site-nav.is-open .site-nav__link {
+    opacity: 1;
+    transform: none;
+  }
+  .site-nav.is-open .site-nav__link:nth-child(2) {
+    transition-delay: 0.05s;
+  }
+  .site-nav.is-open .site-nav__link:nth-child(3) {
+    transition-delay: 0.1s;
+  }
+  /* In the overlay the current page gets its own underline instead of the sliding one */
+  .site-nav.has-js .site-nav__indicator {
+    display: none;
+  }
+  .site-nav.has-js.has-indicator .site-nav__link[aria-current="page"]::after {
+    display: block;
+    bottom: -4px;
+    height: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-nav__toggle span,
+  .site-nav.has-js .site-nav__links,
+  .site-nav.has-js .site-nav__link {
+    transition: none !important;
+  }
 }
 
 /* HERO */
@@ -69,6 +255,44 @@ h1 {
   overflow: hidden;
   background: #000;
   background: linear-gradient(to right, #000, #434343);
+}
+
+/* Case study hero: same box as the other pages' hero.
+   Desktop: title left, project image right. Phones: title only (image follows below the hero). */
+.case_hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.case_hero_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 80rem;
+  height: 100%;
+}
+.case_hero_title {
+  flex: 1 1 0;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+.case_hero_img {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 55%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@media (min-width: 992px) {
+  .case_hero_title {
+    text-align: left;
+  }
 }
 
 .cover_box .row {
@@ -359,10 +583,6 @@ footer {
 }
 
 /* PORTFOLIO */
-.btn_back {
-  width: 4rem;
-  opacity: 0.2;
-}
 
 .sun_home {
   width: 100%;
@@ -377,14 +597,6 @@ footer {
   margin: 0 auto;
 }
 
-/* Case study titles: the page's h1, styled like the original h2 */
-h1.story_title {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: normal;
-  margin: 0 0 0.5rem;
-}
 /*# sourceMappingURL=main.css.map */
 
 /* Mobile headline under the profile illustration (hero side text is hidden below lg) */
@@ -396,6 +608,7 @@ h1.story_title {
   margin: 0 auto;
   color: #fff;
   font-size: 0.8rem;
+  font-weight: 500;
   line-height: 1.3;
   z-index: 2;
 }

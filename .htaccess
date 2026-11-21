@@ -17,3 +17,10 @@ Redirect 301 /assets/stephen_wildrick_resume.pdf /assets/stephen-wildrick-resume
 # Removed contact form: redirect even if the old files are still on the server
 Redirect 301 /process.php /pages/contact.html
 Redirect 301 /thanks.htm /pages/contact.html
+
+# Resume always downloads (also covers browsers that ignore the link's download attribute)
+<IfModule mod_headers.c>
+  <Files "stephen-wildrick-resume.pdf">
+    Header set Content-Disposition "attachment; filename=\"Stephen-Wildrick-Resume.pdf\""
+  </Files>
+</IfModule>

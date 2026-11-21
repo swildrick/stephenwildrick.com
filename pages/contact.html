@@ -20,9 +20,11 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/site-nav.js" defer></script>
 
 
     <!-- Google Analytics -->
@@ -37,22 +39,18 @@
   </head>
     <body>
         <!-- NAV -->
-        <nav class="navbar">
-          <a class="" href="/">
-            <img src="/assets/images/home-icon.svg" class="nav_logo d-inline-block align-top" alt="Home">
+        <nav class="site-nav" aria-label="Main">
+          <a class="site-nav__home" href="/" aria-label="Home">
+            <svg width="20" height="22" viewBox="0 0 16 18" aria-hidden="true" focusable="false"><path d="M2 16H5V10H11V16H14V7L8 2.5L2 7V16ZM0 18V6L8 0L16 6V18H9V12H7V18H0Z" fill="currentColor"/></svg>
           </a>
-          <div class="nav-holder">
-              <div class="navbar-nav">
-                <a href="/pages/work.html"><div class="nav-item">Work</div></a>
-              </div>
-              <div class="navbar-nav">
-                <a href="#"><div class="nav-item">Contact</div></a>
-              </div>
-
-              <div class="navbar-nav">
-                <a href="/assets/stephen-wildrick-resume.pdf" target="_blank" rel="noopener"><div class="nav-item">Resume</div></a>
-              </div>
+          <div class="site-nav__links" id="site-menu">
+            <a class="site-nav__link" href="/pages/work.html">Work</a>
+            <a class="site-nav__link" href="/pages/contact.html" aria-current="page">Contact</a>
+            <a class="site-nav__link" href="/assets/stephen-wildrick-resume.pdf" download="Stephen-Wildrick-Resume.pdf">Resume</a>
           </div>
+          <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
         </nav>
 
         <!-- HERO -->
@@ -86,12 +84,6 @@
           <a href='tel:602-670-3938' target='_blank'><img src="/assets/images/btn_phone.svg" alt='602-670-3938' class='contact-icon'></a>
         </div>
       </div>
-          <div class="row mx-auto justify-content-center">
-            <div class="col-12 mx-auto-sm">
-              <br>
-              <a class="btn-work d-inline-block" href="/assets/stephen-wildrick-resume.pdf" target="_blank" rel="noopener"><div class="nav-item">download my resume (pdf)</div></a>
-            </div>
-          </div>
     </div>
 
     <!-- FOOTER -->
@@ -100,20 +92,17 @@
         <br/>
         <div class="row gx-0 mx-auto">
           <div class="col-12 col-md-4 mx-auto-sm">
-            <a href='https://www.linkedin.com/in/swildrick' target='_blank'><img src="/assets/images/linkedin.svg" alt='Linkedin Stephen Wildrick' class='footer-icon'></a>
-            <a href='https://codepen.io/swildrick24' target='_blank'><img src="/assets/images/codepen.svg" alt='Codepen Stephen Wildrick' class='footer-icon'></a>
-            <a href='https://github.com/swildrick' target='_blank'><img src="/assets/images/git.svg" alt='Github Stephen Wildrick' class='footer-icon'></a>
-            <a href='https://www.instagram.com/swildrick24' target='_blank'><img src="/assets/images/instagram.svg" alt='Instagram Stephen Wildrick' class='footer-icon'></a>
+            <a href="https://www.linkedin.com/in/swildrick" target="_blank" rel="noopener"><img src="/assets/images/linkedin.svg" alt="Stephen Wildrick on LinkedIn" class="footer-icon"></a>
+            <a href="https://codepen.io/swildrick24" target="_blank" rel="noopener"><img src="/assets/images/codepen.svg" alt="Stephen Wildrick on CodePen" class="footer-icon"></a>
+            <a href="https://github.com/swildrick" target="_blank" rel="noopener"><img src="/assets/images/git.svg" alt="Stephen Wildrick on GitHub" class="footer-icon"></a>
+            <a href="https://www.instagram.com/swildrick24" target="_blank" rel="noopener"><img src="/assets/images/instagram.svg" alt="Stephen Wildrick on Instagram" class="footer-icon"></a>
           </div>
-          <br/>
-          <br/>
           <div class="col-12 col-md-4 mx-auto-sm"></div>
           <div class="col-12 col-md-4 mx-auto-sm py-2 text-center txt-footer">
-            &#169;
-            <time>2026</time> Stephen Wildrick
+            &#169; <time>2026</time> Stephen Wildrick
           </div>
-          <div class="col-12 col-md-4 mx-auto-sm"></div>
         </div>
       </div>
-      </footer>
+    </footer>
     </body>
+</html>
